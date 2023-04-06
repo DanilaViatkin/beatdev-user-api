@@ -12,4 +12,8 @@ public class NotFoundEntityException extends RuntimeException{
         super(message);
         this.identificator  = identificator ;
     }
+
+    public Object getIdentificator(){
+        return identificator;
+    }
 }

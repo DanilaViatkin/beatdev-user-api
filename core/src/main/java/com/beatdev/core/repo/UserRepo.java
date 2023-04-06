@@ -6,6 +6,6 @@ import java.util.Optional;
 
 public interface UserRepo {
     Optional<User> findUserById(long id);
-    long createUser(User user);
+    User createUser(User user);
     User updateUser(User user);
 }

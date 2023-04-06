@@ -1,8 +1,10 @@
 package com.beatdev.core.model.converter;
 
 import com.beatdev.core.model.User;
-import com.beatdev.core.model.UserDto;
+import com.beatdev.core.model.dto.UserDto;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserConverter implements Converter<User, UserDto>{
     @Override
     public User convertToEntity(UserDto dto) {
@@ -12,11 +14,12 @@ public class UserConverter implements Converter<User, UserDto>{
         user.setName(dto.getName());
         user.setStatus(dto.getStatus());
         user.setImageURI(dto.getImageURI());
+        user.setPassword(dto.getPassword());
         return user;
     }
 
     @Override
-    public UserDto converToDto(User entity) {
+    public UserDto convertToDto(User entity) {
         UserDto dto = new UserDto();
         dto.setEmail(entity.getEmail());
         dto.setId(entity.getId());

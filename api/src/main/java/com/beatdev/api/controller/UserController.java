@@ -54,7 +54,6 @@ public class UserController {
         String status = getStatusFromJson(statusJson);
         User user = userService.updateUserStatus(id , status);
         StatusDto statusDto = createStatusDto(user);
-        //TODO решить что возращать (создать отдельную модельку или оставить лист стрингов(ненене))
         return statusDto;
     }
 

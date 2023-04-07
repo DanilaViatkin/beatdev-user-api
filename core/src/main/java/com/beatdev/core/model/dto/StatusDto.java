@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class StatusDto {
+
     private Long userId;
     private String currentStatus;
     private String previousStatus;
